@@ -28,7 +28,9 @@
     "locale/*.json",
     "icon.svg",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "README.en.md",
+    "scripts/set-name.mjs"
   ],
   "scripts": {
     "check": "node --check index.js && node --check client.js",

@@ -41,7 +41,12 @@ if (nextName === undefined) {
   console.error('用法：node scripts/set-name.mjs @yourscope/dsh-plugin-market')
   process.exit(1)
 }
-assertValidName(nextName)
+try {
+  assertValidName(nextName)
+} catch (error) {
+  console.error(error instanceof Error ? error.message : String(error))
+  process.exit(1)
+}
 
 const manifestPath = path.join(root, 'package.json')
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'))
