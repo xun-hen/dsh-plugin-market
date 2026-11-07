@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin Market",
+    "description": "Adds a Plugin Market page to the DSH sidebar that reads the GitHub topic dsh-plugin directly and pairs every project with a written Chinese introduction."
+  }
+}

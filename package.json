@@ -1,0 +1,47 @@
+{
+  "name": "@local/dsh-plugin-market",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DSH 插件市场：直接读取 GitHub 主题 dsh-plugin 的仓库列表，并为每个插件附中文导读。",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "deepseek",
+    "cordis",
+    "plugin-market",
+    "marketplace"
+  ],
+  "homepage": "https://github.com/topics/dsh-plugin",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js",
+    "set-name": "node scripts/set-name.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

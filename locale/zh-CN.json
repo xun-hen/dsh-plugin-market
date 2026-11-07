@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "插件市场",
+    "description": "在 DSH 侧边栏新增「插件市场」页面，直接读取 GitHub 主题 dsh-plugin 的仓库列表，并为每个插件附上中文导读。"
+  }
+}
